@@ -11,7 +11,7 @@ echo "--- Starting Quant Analysis Application ---"
 
 # --- Backend Setup ---
 echo "[1/4] Setting up backend..."
-cd backend
+cd api
 
 # Create a virtual environment if it doesn't exist
 if [ ! -d "venv" ]; then
@@ -34,9 +34,9 @@ npm install
 
 # --- Start Servers ---
 echo "[3/4] Starting backend server (FastAPI)..."
-cd ../backend
+cd ../api
 # Start the uvicorn server in the background
-uvicorn main:app --host 0.0.0.0 --port 8000 &
+uvicorn index:app --host 0.0.0.0 --port 8000 &
 # Save its process ID to kill it later
 BACKEND_PID=$!
 cd ../frontend

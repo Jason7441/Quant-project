@@ -8,7 +8,7 @@ echo "--- Starting Quant Analysis Application ---"
 
 REM --- Backend Setup ---
 echo [1/4] Setting up backend...
-cd backend
+cd api
 
 REM Create a virtual environment if it doesn't exist
 if not exist venv (
@@ -27,9 +27,9 @@ echo "Installing frontend dependencies..."
 npm install
 
 echo [3/4] Starting backend server (FastAPI)...
-cd ..\\backend
+cd ..\api
 REM Start the uvicorn server in a new, non-blocking window
-start "Backend" cmd /c "venv\\Scripts\\uvicorn.exe main:app --host 0.0.0.0 --port 8000"
+start "Backend" cmd /c "venv\Scripts\uvicorn.exe index:app --host 0.0.0.0 --port 8000"
 
 cd ..\\frontend
 echo [4/4] Starting frontend server (React)...

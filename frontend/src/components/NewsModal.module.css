@@ -1,0 +1,191 @@
+/* --- Base Modal Styles --- */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 700px; /* Increased width for more content */
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #444;
+  flex-shrink: 0;
+}
+
+.ticker {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: #fff;
+}
+
+.modalBody {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  overflow-y: auto;
+}
+
+.chartContainer {
+  height: 450px;
+  margin: 0 -1.5rem;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.loadingText {
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ccc;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* --- Analysis Breakdown Section --- */
+.analysisSection {
+  margin-bottom: 2rem;
+}
+
+.indicatorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.indicatorItem {
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.indicatorItem span {
+  display: block;
+}
+
+.indicatorValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0.3rem;
+}
+
+.rationale {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.rationale ul {
+  padding-left: 20px;
+  margin: 0.5rem 0 0 0;
+}
+
+.signals {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.signalItem {
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+
+.signalName {
+  font-weight: bold;
+  color: #f5f5f5;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.signalMeaning {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* --- News Section --- */
+.newsSection {
+  /* Styles for the news section */
+}
+
+.newsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.newsItem {
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.headline {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: #f5f5f5;
+}
+
+.sentiment {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.glow {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+}

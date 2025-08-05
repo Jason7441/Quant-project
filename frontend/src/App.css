@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* A reusable class for the glowing text effect */
+.glow {
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+}
+
+/* Specific glow colors for recommendations */
+.glow-green {
+  color: #23d160; /* A bright, modern green */
+  text-shadow: 0 0 8px rgba(35, 209, 96, 0.7);
+}
+
+.glow-red {
+  color: #ff4757; /* A modern, slightly soft red */
+  text-shadow: 0 0 8px rgba(255, 71, 87, 0.7);
+}

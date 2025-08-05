@@ -1,0 +1,30 @@
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid #333; /* Separator line from the chart */
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  padding: 0.3rem 0.8rem; /* Smaller padding */
+  border-radius: 5px;
+  font-size: 0.8rem; /* Smaller font */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.button.active {
+  background-color: #3c3c3c;
+  color: #fff;
+  border-color: #555;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.15); /* More subtle glow */
+}

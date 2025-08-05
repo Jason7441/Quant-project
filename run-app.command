@@ -21,8 +21,7 @@ fi
 
 # Install/update backend dependencies
 echo "Installing backend dependencies from requirements.txt..."
-source venv/bin/activate
-pip install -r requirements.txt
+venv/bin/python3 -m pip install -r requirements.txt
 
 # --- Frontend Setup ---
 echo "[2/4] Setting up frontend..."
@@ -36,7 +35,7 @@ npm install
 echo "[3/4] Starting backend server (FastAPI)..."
 cd ../api
 # Start the uvicorn server in the background
-uvicorn index:app --host 0.0.0.0 --port 8000 &
+venv/bin/python3 -m uvicorn index:app --host 0.0.0.0 --port 8000 &
 # Save its process ID to kill it later
 BACKEND_PID=$!
 cd ../frontend

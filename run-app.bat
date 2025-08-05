@@ -17,8 +17,7 @@ if not exist venv (
 )
 
 echo "Installing backend dependencies..."
-call venv\\Scripts\\activate.bat
-pip install -r requirements.txt
+call venv\Scripts\python.exe -m pip install -r requirements.txt
 
 echo [2/4] Setting up frontend...
 cd ..\\frontend
@@ -29,7 +28,7 @@ npm install
 echo [3/4] Starting backend server (FastAPI)...
 cd ..\api
 REM Start the uvicorn server in a new, non-blocking window
-start "Backend" cmd /c "venv\Scripts\uvicorn.exe index:app --host 0.0.0.0 --port 8000"
+start "Backend" cmd /c "venv\Scripts\python.exe -m uvicorn index:app --host 0.0.0.0 --port 8000"
 
 cd ..\\frontend
 echo [4/4] Starting frontend server (React)...
